@@ -1,17 +1,19 @@
 const soldier = {
     name: 'Gigachad',
     health: 10,
-    weapon:{
+    weapon: {
         model: 'Лук',
         numberofrounds: 30,
-    } ,
+    },
     ammo: 3,
     fire: function () {
         if (this.weapon.numberofrounds === 0) {
             console.log("обойма пуста. Перезарядитесь");
-        }else{this.weapon.numberofrounds -= 1
-            console.log('бах-бах');}
-        
+        } else {
+            this.weapon.numberofrounds -= 1
+            console.log('бах-бах');
+        }
+
     },
     reload: function () {
         if (this.ammo === 0 && this.weapon.numberofrounds < 30) {
@@ -28,9 +30,9 @@ const soldier = {
     hurt: function () {
         if (this.health === 0) {
             console.log('mission failed');
-        }else{
+        } else {
             this.health -= 1
         }
-    
-    } ,
+
+    },
 }
