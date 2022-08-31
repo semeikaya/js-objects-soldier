@@ -28,10 +28,10 @@ const soldier = {
         }
     },
     hurt: function () {
-        if (this.health === 0) {
-            console.log('mission failed');
-        } else {
+        if (this.health > 0) {
             this.health -= 1
+        } else {
+            console.log('mission failed');
         }
 
     },
